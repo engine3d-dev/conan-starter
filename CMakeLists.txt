@@ -3,7 +3,7 @@ project(Starter C CXX)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE INTERNAL "") # works (in creating the compile_commands.json file)
 
-add_executable(${PROJECT_NAME} Application.cpp)
+add_executable(${PROJECT_NAME} ModelExample/Application.cpp)
 
 # Copy to compile_commands.json for .clangd
 add_custom_target(
@@ -46,10 +46,16 @@ if(MSVC)
 endif(MSVC)
 
 # Libraries linking
+find_package(assimp REQUIRED)
 find_package(glfw3 REQUIRED)
+find_package(glm REQUIRED)
+find_package(glad REQUIRED)
 find_package(imguidocking REQUIRED)
 
 target_link_libraries(${PROJECT_NAME}
+    assimp::assimp
     glfw
+    glm::glm
+    glad::glad
     imguidocking::imguidocking
 )

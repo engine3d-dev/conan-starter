@@ -15,6 +15,9 @@ class StarterConanRecipe(ConanFile):
     
     def requirements(self):
         # self.requires("shaderc/2024.1")
+        self.requires("stb/cci.20240531")
+        self.requires("glm/cci.20230113")
+        self.requires("glad/0.1.36")
         self.requires("glfw/3.4")
         self.requires("imguidocking/1.0")
 
