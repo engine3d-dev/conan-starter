@@ -12,11 +12,16 @@ class StarterConanRecipe(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
     generators = "CMakeDeps", "CMakeToolchain"
     export_source = "CMakeLists.txt", "Application.cpp"
-    
+
+    # Putting all of your build-related dependencies here
+    def build_requirements(self):
+        self.tool_requires("make/4.4.1")
+        self.tool_requires("cmake/3.27.1")
+        self.tool_requires("engine3d-cmake-utils/2.0")
+
+    # Putting all of your packages here
     def requirements(self):
-        # self.requires("shaderc/2024.1")
-        self.requires("glfw/3.4")
-        self.requires("imguidocking/1.0")
+        pass
 
     def build(self):
         cmake = CMake(self)
