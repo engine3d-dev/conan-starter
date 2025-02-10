@@ -3,5 +3,14 @@ project(Starter CXX)
 
 
 build_application(
-    SOURCES Application.cpp
+    SOURCES
+    Application.cpp
+
+    PACKAGES
+    glfw3
+    fmt
+
+    LINK_PACKAGES
+    glfw
+    fmt::fmt
 )

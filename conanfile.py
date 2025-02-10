@@ -21,7 +21,8 @@ class StarterConanRecipe(ConanFile):
 
     # Putting all of your packages here
     def requirements(self):
-        pass
+      self.requires("glfw/3.4")
+      self.requires("fmt/10.2.1")
 
     def build(self):
         cmake = CMake(self)
