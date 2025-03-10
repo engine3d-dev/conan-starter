@@ -4,7 +4,7 @@ project(Starter CXX)
 
 build_application(
     SOURCES
-    Application.cpp
+    application.cpp
 
     PACKAGES
     glfw3
