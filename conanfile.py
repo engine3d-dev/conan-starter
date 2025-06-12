@@ -17,12 +17,16 @@ class StarterConanRecipe(ConanFile):
     def build_requirements(self):
         self.tool_requires("make/4.4.1")
         self.tool_requires("cmake/3.27.1")
-        self.tool_requires("engine3d-cmake-utils/2.0")
+        self.tool_requires("engine3d-cmake-utils/4.0")
 
     # Putting all of your packages here
     def requirements(self):
-      self.requires("glfw/3.4")
-      self.requires("fmt/10.2.1")
+        self.requires("glfw/3.4", transitive_headers=True)
+        self.requires("spdlog/1.15.1")
+        self.requires("glm/1.0.1", transitive_headers=True)
+        self.requires("box2d/2.4.1", transitive_headers=True)
+        self.requires("opengl/system", transitive_headers=True)
+        self.requires("imguidocking/2.0")
 
     def build(self):
         cmake = CMake(self)
