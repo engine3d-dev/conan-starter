@@ -19,6 +19,7 @@ class StarterConanRecipe(ConanFile):
         self.tool_requires("cmake/3.27.1")
         self.tool_requires("engine3d-cmake-utils/4.0")
 
+
     # Putting all of your packages here
     def requirements(self):
         self.requires("glfw/3.4", transitive_headers=True)
