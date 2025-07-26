@@ -9,8 +9,12 @@ build_application(
     PACKAGES
     glfw3
     fmt
+    glad
 
     LINK_PACKAGES
     glfw
     fmt::fmt
+    glad::glad
 )
+
+generate_compile_commands()
