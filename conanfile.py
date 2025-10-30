@@ -25,9 +25,9 @@ class StarterConanRecipe(ConanFile):
         self.requires("glfw/3.4", transitive_headers=True)
         self.requires("spdlog/1.15.1")
         self.requires("glm/1.0.1", transitive_headers=True)
-        self.requires("box2d/2.4.1", transitive_headers=True)
         self.requires("opengl/system", transitive_headers=True)
         self.requires("imguidocking/2.0")
+        self.requires("glad/0.1.36")
 
     def build(self):
         cmake = CMake(self)
