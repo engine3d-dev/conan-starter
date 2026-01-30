@@ -7,8 +7,7 @@ from conan.tools.files import copy
 import os
 
 class StarterConanRecipe(ConanFile):
-    name = "example"
-    version = "1.0"
+    name = "starter"
     settings = "os", "compiler", "build_type", "arch"
 
     def build_requirements(self):
