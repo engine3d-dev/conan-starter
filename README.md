@@ -1,24 +1,14 @@
 # Conan Starter Project
 
-`conan-starter` is a starter project to easily get started to using conan. This is a template repository \
-that you can use.
+Starter Conan project that can be used for more general projects.
 
-## Conan Setup
+If you do not already have setup Conan. Before you build this project.
 
-To get all of Engine3D packages, just run this conan command. To start using them.
+Be sure to follow the [getting started](https://engine3d-dev.github.io/0.1/getting_started/) page.
 
-```
-conan remote add engine3d-conan https://libhal.jfrog.io/artifactory/api/conan/engine3d-conan
-```
+## Building the Starter
 
-## Build Starter
+!!! tip
+> `-b missing` is to make sure dependencies for your project are available before linking into your project from the conan cache.
 
-Run this conan command to build the project with `-b missing` on the first build, so conan can install any missing dependencies.
-
-```
 conan build . -b missing
-```
-
-## Running the Starter
-
-Running the executable, `./build/Release/Starter`
