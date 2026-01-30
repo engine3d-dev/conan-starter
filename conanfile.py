@@ -14,7 +14,6 @@ class StarterConanRecipe(ConanFile):
     def build_requirements(self):
         self.tool_requires("cmake/[^4.0.0]")
         self.tool_requires("ninja/[^1.3.0]")
-        self.test_requires("boost-ext-ut/2.3.1")
         self.tool_requires("engine3d-cmake-utils/4.0")
 
     # Putting the dependencies you use in the project here.
