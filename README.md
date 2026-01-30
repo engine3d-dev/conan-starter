@@ -8,7 +8,7 @@ Be sure to follow the [getting started](https://engine3d-dev.github.io/0.1/getti
 
 ## Building the Starter
 
-!!! tip
+> [!TIP]
 > `-b missing` is to make sure dependencies for your project are available before linking into your project from the conan cache.
 
 conan build . -b missing
