@@ -6,11 +6,4 @@ build_application(
     SOURCES
     application.cpp
 
-    PACKAGES
-    glfw3
-    fmt
-
-    LINK_PACKAGES
-    glfw
-    fmt::fmt
 )
